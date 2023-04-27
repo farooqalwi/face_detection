@@ -29,9 +29,9 @@ def face_detection():
 
         # Return 1 if face is present, 0 otherwise
         if len(faces) == 0:
-            return jsonify({"Result": "No face found in the image", "Code": 0})
+            return jsonify({"Result": "No face found in the image, you may use it.", "Code": 0})
         else:
-            return jsonify({"Result": "Face found in the image", "Code": 1})
+            return jsonify({"Result": "Face found in the image. Kindly Choose a non facial image", "Code": 1})
     except Exception:
         return jsonify({"Error": "No image was provided or Image has broken.", "Code": 400}), 400
 
